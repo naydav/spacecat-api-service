@@ -33,9 +33,6 @@ export default (context) => {
     }
 
     for (const baseURL of baseURLs) {
-      if (baseURL.length === 0) {
-        throw new Error('Invalid URL format');
-      }
       if (!isValidUrl(baseURL)) {
         throw new Error(`Invalid URL format: ${baseURL}`);
       }

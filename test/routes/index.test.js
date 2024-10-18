@@ -74,6 +74,9 @@ describe('getRouteHandlers', () => {
     getImportJobsByDateRange: sinon.stub(),
   };
 
+  const mockSitesAuditsController = {
+  };
+
   it('segregates static and dynamic routes', () => {
     const { staticRoutes, dynamicRoutes } = getRouteHandlers(
       mockAuditsController,
@@ -86,6 +89,7 @@ describe('getRouteHandlers', () => {
       mockTrigger,
       mockFulfillmentController,
       mockImportController,
+      mockSitesAuditsController,
     );
 
     expect(staticRoutes).to.have.all.keys(
